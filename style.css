@@ -1,0 +1,97 @@
+.wrapper{
+    width: 400px;
+    background-color: #000;
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.calc-rows{
+    
+    display: flex;
+    flex-flow: row nowrap; /*covers two properties: flex-direction and flex-wrap*/
+    justify-content: space-between; /* lay-out along the main-axis, this value pushes the first button on the start line, while the last on the end line*/
+    margin-bottom: 0.5%; /*calculating 4 times the flex-basis of the buttons leaves us with 2%, this gives the black lines between the rows*/
+}
+
+html{
+    box-sizing: border-box; 
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.result-field{
+    background-color: #000;
+    color: #fff;
+    text-align: right;
+    font-family: monospace; /*she added "typewriter fonts" Courier New, Courier also, monospace is the fall-back font || Five basic, typography font-families: serif,sans serif, cursive,fantasy,and monospace.*/
+    padding: 20px 5px;
+    font-size: 40px;
+
+}
+
+
+.calc-button{
+    background-color: #d8d9db;
+    color: black;
+    border: none;
+    font-size: 40px;
+    height: 100px; /*can be also done with adding padding, but with height set, and working with flex - hence there is no width - flex-basis will do the job*/
+    flex-basis: 24.5%; 
+    
+}
+
+.calc-button:hover{
+    background-color: #ebebeb;
+
+}
+
+
+.calc-button:active{ /*active state is the stage after the click, BUT before the page is loaded, in recent days thanks to the high-speed internet we are unable to see this, crafted in the days of the dial-up internet*/
+    background-color: #bbbcbe;
+}
+
+.double{
+flex-basis: 49.7%; /*50% is not aligning the gaps between the buttons, so needed to be fine-tuned*/
+}
+
+.triple{
+    flex-basis: 74.8%;
+
+}
+
+/*to not have another class value of function, last:child selectors will do the job here*/
+/*.function{
+    background-color: #df974c;
+    color: #fff;
+}
+
+.function:hover {
+    background-color: #dfb07e;
+
+}
+
+.function:active {
+    background-color: #dd8d37;
+
+}*/
+
+/* Attempted with last:child selectors, but the space between 0 and equals acts as a button and changes colors*/
+.calc-button:last-child { /*as my first attempt I used .calc-rows selector, actually those classes need to be selected, what need to be styled, not their parents*/
+    background-color: #df974c;
+        color: #fff;
+}
+.calc-button:last-child:hover {
+    background-color: #dfb07e;
+
+}
+
+.calc-button:last-child:active {
+    background-color: #dd8d37;
+
+}
+

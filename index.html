@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontendMasters Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="wrapper"> 
+<!--<div class="calc-head"></div>unnecessary div by me-->
+        <div class="result-field">0</div><!--named screen, and with a section tag-->
+
+        <div class="calc-buttons"><!--named as section-->
+
+                <div class="calc-rows"><!--named calc-button-row, advice: be as precise with names, as possible-->
+                        <button class="calc-button double">C</button><!--MISSED! so added second class property for flexbox targeting, as it takes up more place || see below triple-->
+                        <button class="calc-button">&larr;</button>
+                        <button class="calc-button function">&divide;</button><!--HTML entities - to review, not all have this, for example Equal to or Less-Than Sign?
+                                HTML Math Symbols, Math Entities and ASCII Math Character Code Reference-->
+                </div>
+
+                <div class="calc-rows">
+                        <button class="calc-button">7</button>
+                        <button class="calc-button">8</button>
+                        <button class="calc-button">9</button>
+                        <button class="calc-button function">&times;</button>
+                </div>
+
+                <div class="calc-rows">
+                        <button class="calc-button">4</button>
+                        <button class="calc-button">5</button>
+                        <button class="calc-button">6</button>
+                        <button class="calc-button function">&minus;</button>
+                </div>
+
+                <div class="calc-rows">
+                        <button class="calc-button">1</button>
+                        <button class="calc-button">2</button>
+                        <button class="calc-button">3</button>
+                        <button class="calc-button function">&plus;</button>
+                </div>
+
+                <div class="calc-rows">
+                        <button class="calc-button triple">0</button>
+                        <button class="calc-button function">&equals;</button>
+                </div>
+                        
+
+    </div>
+</div>
+
+
+
+</body> 
+</html>
